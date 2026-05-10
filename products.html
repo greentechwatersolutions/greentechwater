@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products — Greentech Water Purifiers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #F4F1EB;
+      --cream-d: #EAE5DB;
+      --forest: #0D3B24;
+      --green: #1A6B45;
+      --lime: #C8F04E;
+      --white: #FFFFFF;
+      --ink: #0F1A13;
+      --mid: #506050;
+      --border: #D0CABC;
+      --solutions: #DC2626;
+      --logo-box: #37B24D;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+    }
+
+    .display {
+      font-family: 'Fraunces', Georgia, serif;
+    }
+
+    /* ─── NAV (shared) ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      background: rgba(244, 241, 235, .93);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 32px;
+      min-height: 66px;
+    }
+
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .site-logo:hover {
+      opacity: 0.85;
+    }
+
+    .site-logo-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+    }
+
+    .site-logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .sl-tech {
+      color: #16A34A;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .sl-sol {
+      color: #0284C7;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 1.5px;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--mid);
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--forest);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-phones {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--forest);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      max-width: 280px;
+      justify-content: flex-end;
+    }
+
+    .nav-phones a {
+      color: var(--forest);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-phones a:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    .nav-phones .sep {
+      color: var(--border);
+      font-weight: 400;
+    }
+
+    .btn-ghost {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--forest);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      transition: background .2s;
+    }
+
+    .btn-ghost:hover {
+      background: var(--cream-d);
+    }
+
+    .btn-dark {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--white);
+      background: var(--forest);
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+
+    .btn-dark:hover {
+      background: var(--green);
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      background: var(--cream);
+      padding: 52px 32px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb {
+      font-size: .78rem;
+      color: var(--mid);
+      margin-bottom: 10px;
+    }
+
+    .breadcrumb a {
+      color: var(--mid);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--forest);
+    }
+
+    .page-header h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--forest);
+      line-height: 1.1;
+      letter-spacing: -.5px;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .page-header-right {
+      text-align: right;
+    }
+
+    .result-num {
+      font-family: 'Fraunces', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--forest);
+      line-height: 1;
+    }
+
+    .result-label {
+      font-size: .78rem;
+      color: var(--mid);
+      font-weight: 300;
+    }
+
+    /* ─── CATEGORY TABS ─── */
+    .cat-tabs {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cat-tabs-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .cat-tabs-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-tab {
+      white-space: nowrap;
+      padding: 16px 20px;
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--mid);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all .2s;
+      text-decoration: none;
+      display: block;
+    }
+
+    .cat-tab:hover {
+      color: var(--forest);
+    }
+
+    .cat-tab.active {
+      color: var(--forest);
+      font-weight: 700;
+      border-bottom-color: var(--forest);
+    }
+
+    /* ─── PROMO STRIP ─── */
+    .promo {
+      background: var(--forest);
+      padding: 11px 32px;
+      text-align: center;
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .75);
+      font-weight: 400;
+    }
+
+    .promo strong {
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    /* ─── SHOP LAYOUT ─── */
+    .shop {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 32px 32px 80px;
+      display: grid;
+      grid-template-columns: 248px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      position: sticky;
+      top: 82px;
+    }
+
+    .filter-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .filter-head {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-head span {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: .3px;
+      text-transform: uppercase;
+    }
+
+    .filter-head button {
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--green);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .filter-body {
+      padding: 16px 18px;
+    }
+
+    .filter-group {
+      margin-bottom: 22px;
+    }
+
+    .filter-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .filter-group-label {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--mid);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .check-opt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 4px 0;
+      cursor: pointer;
+    }
+
+    .check-opt input {
+      width: 15px;
+      height: 15px;
+      accent-color: var(--forest);
+      cursor: pointer;
+    }
+
+    .check-opt label {
+      font-size: .85rem;
+      color: var(--mid);
+      cursor: pointer;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 400;
+    }
+
+    .check-opt label em {
+      font-style: normal;
+      color: var(--border);
+      font-size: .78rem;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .price-inp {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: .83rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      outline: none;
+      width: 100%;
+    }
+
+    .price-inp:focus {
+      border-color: var(--forest);
+    }
+
+    input[type=range] {
+      width: 100%;
+      accent-color: var(--forest);
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    .apply-filter {
+      width: 100%;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: .85rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background .2s;
+    }
+
+    .apply-filter:hover {
+      background: var(--green);
+    }
+
+    .sidebar-promo {
+      background: var(--forest);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .sidebar-promo-inner {
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .s-promo-ic {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .s-promo-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .s-promo-sub {
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .55);
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+
+    .s-promo-code {
+      background: rgba(200, 240, 78, .15);
+      border: 1px solid rgba(200, 240, 78, .35);
+      border-radius: 8px;
+      padding: 8px;
+      font-family: monospace;
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--lime);
+      letter-spacing: 1.5px;
+    }
+
+    /* ─── TOOLBAR ─── */
+    .toolbar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-count {
+      font-size: .85rem;
+      color: var(--mid);
+      font-weight: 400;
+    }
+
+    .toolbar-count strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .active-filters {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .af-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      color: var(--forest);
+      font-size: .72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+
+    .af-tag button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: .85rem;
+      color: var(--mid);
+      line-height: 1;
+      padding: 0;
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sort-sel {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 12px;
+      font-size: .83rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      outline: none;
+      cursor: pointer;
+      background: var(--white);
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 4px;
+    }
+
+    .vt-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+
+    .vt-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--mid);
+    }
+
+    .vt-btn.on {
+      background: var(--forest);
+      border-color: var(--forest);
+    }
+
+    .vt-btn.on svg {
+      fill: var(--white);
+    }
+
+    /* ─── PRODUCT GRID ─── */
+    .pg {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .pg.list-mode {
+      grid-template-columns: 1fr;
+    }
+
+    /* ─── PRODUCT CARD ─── */
+    .pc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all .3s;
+    }
+
+    .pc:hover {
+      border-color: var(--green);
+      box-shadow: 0 16px 48px rgba(13, 59, 36, .1);
+      transform: translateY(-4px);
+    }
+
+    .pc-img {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pc-img.c-forest {
+      background: linear-gradient(135deg, #0D3B24, #1A6B45);
+    }
+
+    .pc-img.c-purple {
+      background: linear-gradient(135deg, #2D1B69, #6D28D9);
+    }
+
+    .pc-img.c-copper {
+      background: linear-gradient(135deg, #451a03, #b45309);
+    }
+
+    .pc-img.c-blue {
+      background: linear-gradient(135deg, #0c2461, #0369a1);
+    }
+
+    .pc-img.c-slate {
+      background: linear-gradient(135deg, #1e293b, #334155);
+    }
+
+    .pc-img.c-teal {
+      background: linear-gradient(135deg, #0f3d3d, #0d9488);
+    }
+
+    .pc-img::before {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .05);
+      right: -80px;
+      top: -80px;
+    }
+
+    .pc-badges {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      gap: 5px;
+      z-index: 2;
+    }
+
+    .pb {
+      font-size: .68rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 5px;
+      letter-spacing: .3px;
+    }
+
+    .pb.lime {
+      background: var(--lime);
+      color: var(--forest);
+    }
+
+    .pb.red {
+      background: #ef4444;
+      color: #fff;
+    }
+
+    .pb.purple {
+      background: #7c3aed;
+      color: #fff;
+    }
+
+    .pb.white {
+      background: rgba(255, 255, 255, .9);
+      color: var(--ink);
+    }
+
+    .wl-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, .2);
+      cursor: pointer;
+      font-size: .95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+      z-index: 2;
+    }
+
+    .wl-btn:hover {
+      background: rgba(255, 255, 255, .9);
+    }
+
+    /* small CSS purifier inside card */
+    .mini-purifier {
+      width: 70px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .mp-cap {
+      width: 54px;
+      height: 12px;
+      border-radius: 27px;
+      margin: 0 auto;
+      transform: translateY(6px);
+    }
+
+    .mp-body {
+      width: 70px;
+      height: 136px;
+      border-radius: 35px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset -7px 0 14px rgba(0, 0, 0, .3), inset 4px 0 10px rgba(255, 255, 255, .07), 0 20px 40px rgba(0, 0, 0, .35);
+    }
+
+    .mp-body::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 14px;
+      height: 100px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .mp-panel {
+      position: absolute;
+      bottom: 34px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 38px;
+      height: 26px;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .mp-txt {
+      font-family: monospace;
+      font-size: 6px;
+      color: #6ee7b7;
+      font-weight: 700;
+    }
+
+    .mp-led {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #6ee7b7;
+      box-shadow: 0 0 6px #6ee7b7;
+      animation: blink 2.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .3
+      }
+    }
+
+    .mp-tap {
+      position: absolute;
+      right: -9px;
+      bottom: 18px;
+      width: 14px;
+      height: 6px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .mp-base {
+      width: 58px;
+      height: 10px;
+      border-radius: 30px;
+      margin: -6px auto 0;
+    }
+
+    .pc-body {
+      padding: 16px 18px 18px;
+    }
+
+    .pc-type {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 5px;
+    }
+
+    .pc-name {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+
+    .pc-desc {
+      font-size: .78rem;
+      color: var(--mid);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+
+    .pc-specs {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .pc-spec {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 3px 10px;
+      font-size: .7rem;
+      font-weight: 500;
+      color: var(--forest);
+    }
+
+    .pc-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .pc-stars {
+      color: #E8A000;
+      font-size: .78rem;
+      letter-spacing: 1px;
+    }
+
+    .pc-rcount {
+      font-size: .75rem;
+      color: var(--mid);
+    }
+
+    .pc-footer {
+      border-top: 1px solid var(--cream-d);
+      padding-top: 14px;
+    }
+
+    .btn-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      background: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 9px;
+      padding: 10px 16px;
+      font-size: .83rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: all .22s;
+      letter-spacing: .1px;
+    }
+
+    .btn-wa:hover {
+      background: #1aab55;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+    }
+
+    .btn-wa svg {
+      flex-shrink: 0;
+    }
+
+    /* list mode overrides */
+    .list-mode .pc {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+
+    .list-mode .pc-img {
+      height: auto;
+      min-height: 180px;
+    }
+
+    .list-mode .pc-desc {
+      display: block;
+    }
+
+    /* ─── PAGINATION ─── */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 40px;
+    }
+
+    .pg-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--mid);
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .pg-btn:hover {
+      border-color: var(--forest);
+      color: var(--forest);
+    }
+
+    .pg-btn.on {
+      background: var(--forest);
+      color: #fff;
+      border-color: var(--forest);
+    }
+
+    .pg-btn.wide {
+      width: auto;
+      padding: 0 16px;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer-brand .site-logo {
+      opacity: 0.9;
+    }
+
+    footer {
+      background: var(--ink);
+      margin-top: 0;
+    }
+
+    .footer-main {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 64px 32px 36px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+
+    .footer-brand p {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .4);
+      line-height: 1.8;
+      margin-top: 16px;
+      font-weight: 300;
+      max-width: 280px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .s-link {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .5);
+      text-decoration: none;
+      font-weight: 700;
+      transition: all .2s;
+    }
+
+    .s-link:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .footer-col h4 {
+      font-size: .75rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .3);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .footer-col a {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .5);
+      text-decoration: none;
+      transition: color .2s;
+      font-weight: 300;
+    }
+
+    .footer-col a:hover {
+      color: var(--lime);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .25);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .certs {
+      display: flex;
+      gap: 6px;
+    }
+
+    .cert {
+      background: rgba(255, 255, 255, .07);
+      padding: 3px 9px;
+      border-radius: 5px;
+      font-size: .68rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .35);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1100px) {
+      .pg {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .shop {
+        grid-template-columns: 220px 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .shop {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        display: none;
+      }
+
+      .pg {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .nav-phones {
+        font-size: .75rem;
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .pg {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── PROMO ─── -->
+  <div class="promo">
+    Summer Sale: <strong>Up to 40% off</strong> + free installation. Use code <strong>PURE40</strong> at checkout.
+  </div>
+
+  <!-- ─── NAV ─── -->
+  <nav>
+    <div class="nav-wrap">
+      <a href="index.html" class="site-logo" aria-label="Green Tech Solutions — home">
+        <svg class="site-logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+          focusable="false">
+          <path
+            d="M 24 4 C 12.95 4 4 12.95 4 24 C 4 35.05 12.95 44 24 44 C 33.15 44 40.85 37.85 43.25 29 L 34.6 29 C 32.7 33.1 28.7 36 24 36 C 17.37 36 12 30.63 12 24 C 12 17.37 17.37 12 24 12 C 28.3 12 32.05 14.3 34.1 17.8 L 41.2 13.8 C 37.8 8 31.4 4 24 4 Z"
+            fill="#16A34A" />
+          <rect x="27" y="21" width="16" height="6" rx="1.5" fill="#16A34A" />
+          <path
+            d="M 23 12 C 23 12 16 20.5 16 26 C 16 30.418 19.134 34 23 34 C 26.866 34 30 30.418 30 26 C 30 20.5 23 12 23 12 Z"
+            fill="#0284C7" stroke="#ffffff" stroke-width="2" />
+        </svg>
+        <div class="site-logo-text">
+          <span class="sl-tech">Green Tech</span>
+          <span class="sl-sol">WATER SOLUTIONS</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="index.html#tech">Technology</a></li>
+        <li><a href="index.html#testimonial">Reviews</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-phones" aria-label="Phone">
+          <a href="tel:+917594900724">7594900724</a>
+          <span class="sep" aria-hidden="true">·</span>
+          <a href="tel:+919526370551">9526370551</a>
+        </span>
+        <a href="#" class="btn-dark">Cart (0)</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── PAGE HEADER ─── -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; All Products</div>
+        <h1 class="display">All <em>Purifiers</em></h1>
+      </div>
+      <div class="page-header-right">
+        <div class="result-num">25</div>
+        <div class="result-label">products available</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CATEGORY TABS ─── -->
+  <div class="cat-tabs">
+    <div class="cat-tabs-inner">
+      <a class="cat-tab active" href="#">All Products</a>
+      <a class="cat-tab" href="#">RO Purifiers</a>
+      <a class="cat-tab" href="#">UV Purifiers</a>
+      <a class="cat-tab" href="#">Alkaline Series</a>
+      <a class="cat-tab" href="#">Copper Series</a>
+      <a class="cat-tab" href="#">Hot &amp; Cold</a>
+      <a class="cat-tab" href="#">Gravity</a>
+      <a class="cat-tab" href="#">Smart / IoT</a>
+      <a class="cat-tab" href="#">Commercial</a>
+    </div>
+  </div>
+
+  <!-- ─── SHOP ─── -->
+  <div class="shop">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="filter-block">
+        <div class="filter-head">
+          <span>Filters</span>
+          <button onclick="this.closest('.filter-block').querySelectorAll('input').forEach(i=>i.checked=false)">Clear
+            all</button>
+        </div>
+        <div class="filter-body">
+
+          <div class="filter-group">
+            <span class="filter-group-label">Price Range</span>
+            <input type="range" min="0" max="60000" value="40000"
+              oninput="document.getElementById('pmax').value=this.value" />
+            <div class="price-row">
+              <input class="price-inp" type="number" placeholder="Min ₹" value="0" />
+              <input class="price-inp" type="number" placeholder="Max ₹" value="40000" id="pmax" />
+            </div>
+            <button class="apply-filter">Apply</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-group-label">Technology</span>
+            <div class="check-opt"><input type="checkbox" checked id="ro"><label for="ro">RO <em>(14)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="uv"><label for="uv">UV <em>(10)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="uf"><label for="uf">UF <em>(8)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="alk"><label for="alk">Alkaline <em>(3)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="cu"><label for="cu">Copper <em>(2)</em></label></div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-group-label">Tank Capacity</span>
+            <div class="check-opt"><input type="checkbox" id="c1"><label for="c1">Up to 7L <em>(4)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="c2"><label for="c2">8 – 10L <em>(9)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="c3"><label for="c3">11 – 15L <em>(5)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="c4"><label for="c4">15L+ <em>(3)</em></label></div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-group-label">Rating</span>
+            <div class="check-opt"><input type="checkbox" id="r1"><label for="r1">★★★★★ 4.5+ <em>(8)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="r2"><label for="r2">★★★★☆ 4.0+ <em>(11)</em></label></div>
+            <div class="check-opt"><input type="checkbox" id="r3"><label for="r3">★★★☆☆ 3.0+ <em>(4)</em></label></div>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-group-label">Features</span>
+            <div class="check-opt"><input type="checkbox" id="f1"><label for="f1">Smart IoT App</label></div>
+            <div class="check-opt"><input type="checkbox" id="f2"><label for="f2">Hot &amp; Cold</label></div>
+            <div class="check-opt"><input type="checkbox" id="f3"><label for="f3">Zero Water Waste</label></div>
+            <div class="check-opt"><input type="checkbox" id="f4"><label for="f4">Wall Mount</label></div>
+            <div class="check-opt"><input type="checkbox" id="f5"><label for="f5">Mineral Cartridge</label></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="sidebar-promo">
+        <div class="sidebar-promo-inner">
+          <span class="s-promo-ic">🎁</span>
+          <div class="s-promo-title">Free AMC worth ₹3,500</div>
+          <div class="s-promo-sub">On all purifiers above ₹15,000 during the Summer Sale</div>
+          <div class="s-promo-code">GREENCARE</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- PRODUCTS AREA -->
+    <main>
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <span class="toolbar-count">Showing <strong>1–12</strong> of <strong>25</strong></span>
+          <div class="active-filters">
+            <span class="af-tag">RO <button onclick="this.parentElement.remove()">×</button></span>
+          </div>
+        </div>
+        <div class="toolbar-right">
+          <select class="sort-sel">
+            <option>Sort: Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest First</option>
+            <option>Best Rated</option>
+          </select>
+          <div class="view-toggle">
+            <button class="vt-btn on" id="gv" onclick="setView('grid')" title="Grid">
+              <svg viewBox="0 0 16 16">
+                <rect x="0" y="0" width="7" height="7" rx="1" />
+                <rect x="9" y="0" width="7" height="7" rx="1" />
+                <rect x="0" y="9" width="7" height="7" rx="1" />
+                <rect x="9" y="9" width="7" height="7" rx="1" />
+              </svg>
+            </button>
+            <button class="vt-btn" id="lv" onclick="setView('list')" title="List">
+              <svg viewBox="0 0 16 16">
+                <rect x="0" y="1" width="16" height="3" rx="1" />
+                <rect x="0" y="7" width="16" height="3" rx="1" />
+                <rect x="0" y="13" width="16" height="3" rx="1" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="pg" id="grid">
+
+        <!-- CARD 1 -->
+        <div class="pc">
+          <div class="pc-img c-forest">
+            <div class="pc-badges"><span class="pb lime">Bestseller</span><span class="pb red">−32%</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#071e12;"></div>
+              <div class="mp-body" style="background:linear-gradient(165deg,#2D9A65,#0D3120);">
+                <div class="mp-panel"><span class="mp-txt">TDS 028</span>
+                  <div class="mp-led"></div>
+                </div>
+                <div class="mp-tap" style="background:#071e12;"></div>
+              </div>
+              <div class="mp-base" style="background:#071e12;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">RO · UV · UF · TDS Control</div>
+            <div class="pc-name">Crystal Pro+</div>
+            <div class="pc-desc">Flagship 7-stage purifier with EcoSave™ and smart filter alerts.</div>
+            <div class="pc-specs"><span class="pc-spec">10L</span><span class="pc-spec">7 Stage</span><span
+                class="pc-spec">15 L/hr</span><span class="pc-spec">Smart Alert</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★★</span><span class="pc-rcount">2,341 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+Crystal+Pro%2B+water+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="pc">
+          <div class="pc-img c-purple">
+            <div class="pc-badges"><span class="pb white">New Launch</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#1a0a3d;"></div>
+              <div class="mp-body" style="background:linear-gradient(165deg,#7C3AED,#4C1D95);">
+                <div class="mp-panel"><span class="mp-txt">pH 8.7</span>
+                  <div class="mp-led" style="background:#c4b5fd;box-shadow:0 0 6px #c4b5fd;"></div>
+                </div>
+                <div class="mp-tap" style="background:#1a0a3d;"></div>
+              </div>
+              <div class="mp-base" style="background:#1a0a3d;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">RO · UV · Alkaline</div>
+            <div class="pc-name">AquaAlkaline Elite</div>
+            <div class="pc-desc">pH-balanced alkaline water with IoT app control and mineral boost.</div>
+            <div class="pc-specs"><span class="pc-spec">12L</span><span class="pc-spec">pH 8.5+</span><span
+                class="pc-spec">Wi-Fi</span><span class="pc-spec">3-Yr Warranty</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★★</span><span class="pc-rcount">876 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+AquaAlkaline+Elite+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="pc">
+          <div class="pc-img c-copper">
+            <div class="pc-badges"><span class="pb lime">Top Rated</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#3d1a0a;"></div>
+              <div class="mp-body" style="background:linear-gradient(165deg,#b45309,#7c2d12);">
+                <div class="mp-panel"><span class="mp-txt">Cu 0.3</span>
+                  <div class="mp-led" style="background:#fcd34d;box-shadow:0 0 6px #fcd34d;"></div>
+                </div>
+                <div class="mp-tap" style="background:#3d1a0a;"></div>
+              </div>
+              <div class="mp-base" style="background:#3d1a0a;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">RO · Copper Infusion</div>
+            <div class="pc-name">CopperShield Pro</div>
+            <div class="pc-desc">Ayurvedic copper infusion at 0.3 mg/L. Mineral balance, auto purification.</div>
+            <div class="pc-specs"><span class="pc-spec">10L</span><span class="pc-spec">Copper</span><span
+                class="pc-spec">7 Stage</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★★</span><span class="pc-rcount">643 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+CopperShield+Pro+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="pc">
+          <div class="pc-img c-blue">
+            <div class="pc-badges"><span class="pb red">−40%</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#0a1a2e;"></div>
+              <div class="mp-body" style="background:linear-gradient(165deg,#1d4ed8,#1e3a5f);">
+                <div class="mp-panel"><span class="mp-txt">90°C</span>
+                  <div class="mp-led" style="background:#fbbf24;box-shadow:0 0 6px #fbbf24;"></div>
+                </div>
+                <div class="mp-tap" style="background:#0a1a2e;"></div>
+              </div>
+              <div class="mp-base" style="background:#0a1a2e;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">RO · UV · Hot &amp; Cold</div>
+            <div class="pc-name">ThermoGuard Duo</div>
+            <div class="pc-desc">Instant hot water + cooling tank. Smart temperature control from 10°C to 90°C.</div>
+            <div class="pc-specs"><span class="pc-spec">8L+3L Hot</span><span class="pc-spec">10–90°C</span><span
+                class="pc-spec">Auto Clean</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★☆</span><span class="pc-rcount">389 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+ThermoGuard+Duo+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="pc">
+          <div class="pc-img c-teal">
+            <div class="pc-badges"><span class="pb lime">Smart</span><span class="pb white">New</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#0a2a2a;"></div>
+              <div class="mp-body" style="background:linear-gradient(165deg,#0d9488,#0f3d3d);">
+                <div class="mp-panel"><span class="mp-txt">Wi-Fi</span>
+                  <div class="mp-led" style="background:#5eead4;box-shadow:0 0 6px #5eead4;"></div>
+                </div>
+                <div class="mp-tap" style="background:#0a2a2a;"></div>
+              </div>
+              <div class="mp-base" style="background:#0a2a2a;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">RO · UV · IoT</div>
+            <div class="pc-name">SmartPure Connect</div>
+            <div class="pc-desc">Wi-Fi connected, app-controlled, auto TDS adjustment. Voice assistant compatible.</div>
+            <div class="pc-specs"><span class="pc-spec">10L</span><span class="pc-spec">Wi-Fi+App</span><span
+                class="pc-spec">Auto TDS</span><span class="pc-spec">3-Yr</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★★</span><span class="pc-rcount">218 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+SmartPure+Connect+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="pc">
+          <div class="pc-img c-slate">
+            <div class="pc-badges"><span class="pb lime">No Electricity</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#1e293b;"></div>
+              <div class="mp-body" style="background:linear-gradient(165deg,#475569,#1e293b);">
+                <div class="mp-panel"><span class="mp-txt">0W</span>
+                  <div class="mp-led" style="background:#94a3b8;box-shadow:0 0 4px #94a3b8;"></div>
+                </div>
+                <div class="mp-tap" style="background:#1e293b;"></div>
+              </div>
+              <div class="mp-base" style="background:#1e293b;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">Gravity · UF · Carbon</div>
+            <div class="pc-name">NaturalFlow Gravity</div>
+            <div class="pc-desc">No electricity, zero water waste. Ideal for municipal water with low TDS.</div>
+            <div class="pc-specs"><span class="pc-spec">15L</span><span class="pc-spec">No Power</span><span
+                class="pc-spec">Zero Waste</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★☆</span><span class="pc-rcount">512 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+NaturalFlow+Gravity+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="pc">
+          <div class="pc-img c-forest">
+            <div class="pc-badges"><span class="pb red">−35%</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#071e12;"></div>
+              <div class="mp-body" style="background:linear-gradient(165deg,#16a34a,#0D3120);">
+                <div class="mp-panel"><span class="mp-txt">TDS 032</span>
+                  <div class="mp-led"></div>
+                </div>
+                <div class="mp-tap" style="background:#071e12;"></div>
+              </div>
+              <div class="mp-base" style="background:#071e12;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">RO · UV · Mineraliser</div>
+            <div class="pc-name">MineralRich Pro 8L</div>
+            <div class="pc-desc">Ca &amp; Mg mineral boost with active carbon and live TDS display panel.</div>
+            <div class="pc-specs"><span class="pc-spec">8L</span><span class="pc-spec">6 Stage</span><span
+                class="pc-spec">TDS Display</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★★</span><span class="pc-rcount">1,087 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+MineralRich+Pro+8L+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="pc">
+          <div class="pc-img c-slate">
+            <div class="pc-badges"><span class="pb white">Commercial</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#111827;"></div>
+              <div class="mp-body"
+                style="background:linear-gradient(165deg,#374151,#111827);width:80px;height:150px;border-radius:16px;">
+                <div class="mp-panel"><span class="mp-txt">25 LPH</span>
+                  <div class="mp-led" style="background:#10b981;box-shadow:0 0 6px #10b981;"></div>
+                </div>
+                <div class="mp-tap" style="background:#111827;"></div>
+              </div>
+              <div class="mp-base" style="background:#111827;width:68px;border-radius:8px;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">Commercial RO</div>
+            <div class="pc-name">OfficePure 25 LPH</div>
+            <div class="pc-desc">High-capacity SS tank unit for offices, restaurants, and clinics. Handles TDS up to
+              3000 ppm.</div>
+            <div class="pc-specs"><span class="pc-spec">25 L/hr</span><span class="pc-spec">SS 50L</span><span
+                class="pc-spec">TDS 3000</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★☆</span><span class="pc-rcount">97 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+OfficePure+25+LPH+commercial+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 9 -->
+        <div class="pc">
+          <div class="pc-img c-copper">
+            <div class="pc-badges"><span class="pb lime">Compact</span></div>
+            <button class="wl-btn" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button>
+            <div class="mini-purifier">
+              <div class="mp-cap" style="background:#3d1a0a;"></div>
+              <div class="mp-body"
+                style="background:linear-gradient(165deg,#d97706,#7c2d12);width:56px;height:110px;border-radius:28px;">
+                <div class="mp-panel" style="bottom:22px;width:30px;height:20px;"><span class="mp-txt"
+                    style="font-size:5px;">UV ON</span>
+                  <div class="mp-led" style="background:#fbbf24;box-shadow:0 0 5px #fbbf24;"></div>
+                </div>
+                <div class="mp-tap" style="background:#3d1a0a;right:-7px;bottom:14px;width:10px;height:5px;"></div>
+              </div>
+              <div class="mp-base" style="background:#3d1a0a;width:46px;height:8px;"></div>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-type">UV · UF · Carbon</div>
+            <div class="pc-name">SwiftClean Mini</div>
+            <div class="pc-desc">Ultra-compact 5-stage purifier. Perfect for smaller kitchens and low-TDS municipal
+              water.</div>
+            <div class="pc-specs"><span class="pc-spec">5L</span><span class="pc-spec">5 Stage</span><span
+                class="pc-spec">Wall Mount</span></div>
+            <div class="pc-rating"><span class="pc-stars">★★★★☆</span><span class="pc-rcount">728 reviews</span></div>
+            <div class="pc-footer">
+              <a href="https://wa.me/917594900724?text=Hi%2C+I%27m+interested+in+the+SwiftClean+Mini+purifier.+Please+share+pricing+and+details."
+                class="btn-wa" target="_blank" rel="noopener">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid -->
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="pg-btn wide">← Prev</button>
+        <button class="pg-btn on">1</button>
+        <button class="pg-btn">2</button>
+        <button class="pg-btn">3</button>
+        <span style="color:var(--mid);padding:0 4px;">…</span>
+        <button class="pg-btn">6</button>
+        <button class="pg-btn wide">Next →</button>
+      </div>
+    </main>
+
+  </div><!-- /shop -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" aria-label="Green Tech Solutions — home">
+          <svg class="site-logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+            focusable="false">
+            <path
+              d="M 24 4 C 12.95 4 4 12.95 4 24 C 4 35.05 12.95 44 24 44 C 33.15 44 40.85 37.85 43.25 29 L 34.6 29 C 32.7 33.1 28.7 36 24 36 C 17.37 36 12 30.63 12 24 C 12 17.37 17.37 12 24 12 C 28.3 12 32.05 14.3 34.1 17.8 L 41.2 13.8 C 37.8 8 31.4 4 24 4 Z"
+              fill="#16A34A" />
+            <rect x="27" y="21" width="16" height="6" rx="1.5" fill="#16A34A" />
+            <path
+              d="M 23 12 C 23 12 16 20.5 16 26 C 16 30.418 19.134 34 23 34 C 26.866 34 30 30.418 30 26 C 30 20.5 23 12 23 12 Z"
+              fill="#0284C7" stroke="#ffffff" stroke-width="2" />
+          </svg>
+          <div class="site-logo-text">
+            <span class="sl-tech">Green Tech</span>
+            <span class="sl-sol">WATER SOLUTIONS</span>
+          </div>
+        </a>
+        <p>Providing safe, healthy drinking water to Indian families since 1999. Built in India, engineered for India.
+        </p>
+        <div class="footer-socials">
+          <a class="s-link" href="#">fb</a>
+          <a class="s-link" href="#">in</a>
+          <a class="s-link" href="#">tw</a>
+          <a class="s-link" href="#">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">RO Purifiers</a></li>
+          <li><a href="#">UV Purifiers</a></li>
+          <li><a href="#">Alkaline Series</a></li>
+          <li><a href="#">Copper Series</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">Gravity</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Book Service</a></li>
+          <li><a href="#">Register Product</a></li>
+          <li><a href="#">Filter Replacement</a></li>
+          <li><a href="#">AMC Plans</a></li>
+          <li><a href="#">Track My Order</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Greentech Water Solutions</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Dealer Program</a></li>
+          <li><a href="#">Press &amp; Media</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Greentech Water Solutions Pvt. Ltd. All rights reserved.</span>
+      <div class="certs">
+        <span class="cert">ISO 9001</span>
+        <span class="cert">NSF Certified</span>
+        <span class="cert">BIS</span>
+        <span class="cert">WQA Gold</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setView(m) {
+      const g = document.getElementById('grid');
+      document.getElementById('gv').classList.toggle('on', m === 'grid');
+      document.getElementById('lv').classList.toggle('on', m === 'list');
+      g.classList.toggle('list-mode', m === 'list');
+    }
+  </script>
+</body>
+
+</html>
